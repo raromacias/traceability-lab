@@ -1,0 +1,20 @@
+[
+    {
+      "id": 1,
+      "name": "Notorious B.I.G",
+      "quote":[ "If the game shakes me or break me, I hope it makes me a better man.", "Stay far from timid, only make moves when your heart's in it.", "Don't let them hold you down, reach for the stars."],
+      "imageURL" : "https://miro.medium.com/max/750/1*YGdpRUmRKtYoQujQSQtw_w@2x.jpeg"
+    },
+    {
+      "id": 2,
+      "name": "Greg Universe",
+      "quote": ["If every pork chop was perfect we wouldn't have hot dogs", "Son, there will come a time in your life when you learn to accept all pizza.", "I didn't drop out of community college for nothing."],
+      "imageURL" : "https://www.denofgeek.com/wp-content/uploads/2020/03/Steven-Universe-Future-Greg-Universe.png?resize=768%2C432"
+    },
+    {
+      "id": 3,
+      "name": "Malcolm X",
+      "quote": ["A man who stands for nothing will fall for anything.", "A wise man can play the part of a clown, but a clown can't play the part of a wise man.", "There is no better than adversity. Every defeat, every heartbreak, every loss, contains its own seed, its own lesson on how to improve your performance next time."],
+      "imageURL" : "https://media-cldnry.s-nbcnews.com/image/upload/newscms/2020_37/3410610/200908-malcolm-x-ew-438p-3410610.jpg"
+    }
+  ]
