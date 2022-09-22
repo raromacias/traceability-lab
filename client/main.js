@@ -1,7 +1,7 @@
 const musesContainer = document.querySelector('#muses-container')
 const form = document.querySelector('form')
 
-const baseURL = `http://localhost:4000/api/muses`
+const baseURL = `https://traceability-raro.herokuapp.com/`
 
 const musesCallback = ({ data: muses }) => displayMuses(muses)
 const errCallback = err => console.log(err)
@@ -20,7 +20,7 @@ const deleteMuse = id => axios.delete(`${baseURL}/${id}`).then(musesCallback).ca
 const getMuses = () => axios.get(baseURL).then(musesCallback).catch(errCallback)
 
 const getCompliment = () => {
-    axios.get("http://localhost:4000/api/compliment")
+    axios.get("/api/compliment")
         .then(res => {
             const data = res.data;
             alert(data);

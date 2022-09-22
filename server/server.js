@@ -17,7 +17,9 @@ var rollbar = new Rollbar({
 rollbar.log("Hello world!");
 
 const { editMuse, deleteMuse, createMuse, getMuses, getCompliment, getRandomFortune } = require('./controller')
-
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, '../client/index.html'))
+})
 app.get("/api/compliment", getCompliment);
 app.get("/api/fortunes", getRandomFortune);
 app.get(`/api/muses`, getMuses)
