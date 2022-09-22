@@ -16,7 +16,6 @@ const musesCase = document.getElementById("displayMuses")
 //set up functions
 const createMuse = body => axios.post(`/api/muses`, body).then(musesCallback).catch(errCallback)
 const deleteMuse = id => axios.delete(`/api/muses/${id}`).then(musesCallback).catch(errCallback)
-// const updateMuse = (id, type) => axios.put(`${baseURL}/${id}`, {type}).then(musesCallback).catch(errCallback)
 const getMuses = () => axios.get(`/api/muses`).then(musesCallback).catch(errCallback)
 
 const getCompliment = () => {
@@ -89,41 +88,6 @@ const editItem = (e) => {
 
     editInput.value = ''
     }
-
-
-// axios.put(`${baseURL}/${editIndex.value}`, newObj)
-//         .then((res) => {
-//             const museCard = document.createElement('div')
-//             museCard.classList.add('muse-card')
-        
-//             museCard.innerHTML = `<img alt='muse cover image' src = ${muses.imageURL} class="muse-cover-image"/>
-//             <p class="name">${muses.name}</p>
-           
-//             <p class="muse-quote">${muses.quote[0]}</p>
-//             `
-        
-        
-//             musesContainer.appendChild(museCard)
-
-//             editIndex.value = ''
-//             editInput.value = ''
-//         })
-
-
-// const editItem = (e) => {
-//     e.preventDefault()
-
-//     let bodyObj = {
-//         name: name.value,
-//         quote: [quote.value], 
-//         imageURL: imageURL.value
-//     }
-//     axios.put(`${baseURL}/${[quote.value]}`, bodyObj)
-//         .then((res)=>)
-// }
-
-
-
 
 
 //combine steps 1 and 2 using Event listener
