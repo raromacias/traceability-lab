@@ -20,6 +20,12 @@ const { editMuse, deleteMuse, createMuse, getMuses, getCompliment, getRandomFort
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, '../client/index.html'))
 })
+app.get('/css', (req, res) => {
+  res.sendFile(path.join(__dirname, '../client/styles.css'))
+})
+app.get('/js', (req, res) => {
+  res.sendFile(path.join(__dirname, '../client/main.js'))
+})
 app.get("/api/compliment", getCompliment);
 app.get("/api/fortunes", getRandomFortune);
 app.get(`/api/muses`, getMuses)
