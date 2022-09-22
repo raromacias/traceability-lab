@@ -1,7 +1,7 @@
 const musesContainer = document.querySelector('#muses-container')
 const form = document.querySelector('form')
 
-const baseURL = `https://traceability-raro.herokuapp.com/`
+const baseURL = `https://traceability-raro.herokuapp.com`
 
 const musesCallback = ({ data: muses }) => displayMuses(muses)
 const errCallback = err => console.log(err)
@@ -14,10 +14,10 @@ const fortuneBtn = document.getElementById('randomFortuneButton')
 const getMusesBtn = document.getElementById('getMuses')
 const musesCase = document.getElementById("displayMuses")
 //set up functions
-const createMuse = body => axios.post(baseURL, body).then(musesCallback).catch(errCallback)
-const deleteMuse = id => axios.delete(`${baseURL}/${id}`).then(musesCallback).catch(errCallback)
+const createMuse = body => axios.post(`/api/muses`, body).then(musesCallback).catch(errCallback)
+const deleteMuse = id => axios.delete(`/api/muses/${id}`).then(musesCallback).catch(errCallback)
 // const updateMuse = (id, type) => axios.put(`${baseURL}/${id}`, {type}).then(musesCallback).catch(errCallback)
-const getMuses = () => axios.get(baseURL).then(musesCallback).catch(errCallback)
+const getMuses = () => axios.get(`/api/muses`).then(musesCallback).catch(errCallback)
 
 const getCompliment = () => {
     axios.get("/api/compliment")
@@ -28,7 +28,7 @@ const getCompliment = () => {
 };
 
 const getRandomFortune = () => {
-    axios.get("http://localhost:4000/api/fortunes/")
+    axios.get("/api/fortunes")
         .then(res => {
             const data = res.data;
             alert(data);
